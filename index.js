@@ -7,9 +7,9 @@ const app=express();
 app.use(cors());
 app.use(express.json(
     {
-        origin:["https://crud-frontend-app.vercel.app/"],
-        methods:["POST","PUT","DELETE","GET"],
-        credentials:true
+        origin:["https://crud-frontend-app.vercel.app"],
+        // methods:["POST","PUT","DELETE","GET"],
+        credentials: true
     }
 ));
 
