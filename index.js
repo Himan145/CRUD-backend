@@ -5,7 +5,13 @@ const modelUser=require('./models/UserDB');
 
 const app=express();
 app.use(cors());
-app.use(express.json());
+app.use(express.json(
+    {
+        origin:["https://crud-frontend-app.vercel.app"],
+        methods:["POST","PUT","DELETE","GET"],
+        credentials:true
+    }
+));
 
 mongoose.connect("mongodb+srv://himanbiswas376:cZczEOMw9Q7kUI3j@yousaf.qbu4mkd.mongodb.net/userDBs?retryWrites=true&w=majority");
 
